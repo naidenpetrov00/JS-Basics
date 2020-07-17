@@ -11,8 +11,8 @@ function payCheck(month, countOverNights) {
     let totalSumForApartment = 0;
 
     if (month == "May" || month == "October") {
-        totalSumForStudio = countOverNights * 50;
-        totalSumForApartment = countOverNights * 65;
+        totalSumForStudio = countOverNights * PriceStudioMayOrOctober;
+        totalSumForApartment = countOverNights * PriceApartmentMayOrOctober;
 
         if (countOverNights > 14) {
             totalSumForStudio *= 0.70;
@@ -26,8 +26,8 @@ function payCheck(month, countOverNights) {
 
     }
     else if(month == "June" || month == "September"){
-        totalSumForStudio = countOverNights * 75.20;
-        totalSumForApartment = countOverNights * 68.70;
+        totalSumForStudio = countOverNights * PriceStudioJuneOrSeptember;
+        totalSumForApartment = countOverNights * PriceApartmentJuneOrSeptember;
 
         if(countOverNights > 14){
             totalSumForStudio *= 0.80;
@@ -36,8 +36,8 @@ function payCheck(month, countOverNights) {
 
     }
     else if(month == "July" || month == "August"){
-        totalSumForStudio = countOverNights * 76;
-        totalSumForApartment = countOverNights * 77;
+        totalSumForStudio = countOverNights * PriceStudioJulyOrAugust;
+        totalSumForApartment = countOverNights * PriceApartmentJulyOrAugust;
 
         if(countOverNights > 14){
             totalSumForApartment *= 0.90;
@@ -45,8 +45,8 @@ function payCheck(month, countOverNights) {
 
     }
 
-    console.log(`Apartment: ${totalSumForApartment.toFixed(2)} lv.`)
-    console.log(`Studio: ${totalSumForStudio.toFixed(2)} lv.`)
+    console.log(`Apartment: ${totalSumForApartment.toFixed(2)}lv.`)
+    console.log(`Studio: ${totalSumForStudio.toFixed(2)}lv.`)
     
 }
 
